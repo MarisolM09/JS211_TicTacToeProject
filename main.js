@@ -22,6 +22,8 @@ let board = [
 // using let because the variable is expected to change from 'X' to 'O' and back
 let playerTurn = 'X';
 
+
+
 // is a function that print the current status of the board using the variable - board
 const printBoard = () => {
   console.log('   0  1  2');
@@ -75,16 +77,19 @@ const diagonalWin = () => {
 const checkForWin = () => {
   // Your code here call each of the check for types of wins
   if(horizontalWin() || verticalWin() || diagonalWin()) {
-    window.alert(`Player ${currentMarker} You Won!`)
+   return true;
   } else {
     changeMarker()
   }
 }
 
 const ticTacToe = (row, column) => {
-  // Your code here to place a marker on the board
+// Your code here to place a marker on the board
   // then check for a win
+  board[row][column] = playerTurn
+  
 }
+
 
 const getPrompt = () => {
   printBoard();
