@@ -22,6 +22,11 @@ let board = [
 // using let because the variable is expected to change from 'X' to 'O' and back
 let playerTurn = 'X';
 
+const changeMarker = () => {
+ if(playerTurn === 'X') {
+   return playerTurn = 'O'
+ } else playerTurn = 'X'
+}
 
 
 // is a function that print the current status of the board using the variable - board
@@ -87,7 +92,7 @@ const ticTacToe = (row, column) => {
 // Your code here to place a marker on the board
   // then check for a win
   board[row][column] = playerTurn
-  
+  checkForWin()
 }
 
 
